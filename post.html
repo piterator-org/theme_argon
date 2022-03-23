@@ -54,6 +54,9 @@
                         </div>
                         <div class="comment-info">
                             <div class="comment-time">
+                                {% if comment.user == user or blog.owner == user %}
+                                <a href="?delete={{ comment.pk }}">删除</a>
+                                {% endif %}
                                 <span class="human-time">{{ comment.sending_time }}</span>
                             </div>
                         </div>
