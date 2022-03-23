@@ -1,0 +1,32 @@
+{% extends 'oierspace/blog/themes/pc/theme_argon/base.html' %}
+{% block title %}{{ blog.name }}{% endblock %}
+{% block content %}
+{% for post in posts %}
+<article class="post card bg-white shadow-sm border-0 post-preview">
+    {% if post.configs.cover %}
+    <header class="post-header text-center post-header-with-thumbnail">
+        <img class="post-thumbnail lazyload lazyload-loaded" src="{{ post.configs.cover }}" alt="thumbnail" style="opacity: 0;">
+        <div class="post-header-text-container">
+            <a class="post-title" href="{% url 'blog_post' post.slug %}">{{ post.title }}</a>
+            {% include 'oierspace/blog/themes/pc/theme_argon/component/post_meta.html' %}
+        </div>
+    </header>
+    {% else %}
+    <header class="post-header text-center">
+        <a class="post-title" href="{% url 'blog_post' post.slug %}">{{ post.title }}</a>
+        {% include 'oierspace/blog/themes/pc/theme_argon/component/post_meta.html' %}
+    </header>
+    {% endif %}
+    <div class="post-content">{{ post.intro }}</div>
+</article>
+{% endfor %}
+<nav>
+    <ul class="pagination">
+        <li class="page-item">
+            <a class="page-link" href="{% url 'blog_posts' %}" style="width: max-content; border-radius: .8em!important; padding: 1.4em 2.2em">
+                查看更多
+            </a>
+        </li>
+    </ul>
+</nav>
+{% endblock %}

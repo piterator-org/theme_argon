@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)https://solstice23.top/ -->
+<html lang="zh-CN" class="immersion-color toolbar-blur article-header-style-1" style="--card-radius:9px;">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<meta name="theme-color" content="#8e8cd8">
+	<meta name="theme-color-rgb" content="142,140,216">
+	<meta name="theme-color-origin" content="#8e8cd8">
+	
+	<title>{% block title %}{{ bloog.name }}{% endblock %}</title>
+	
+	<link rel="dns-prefetch" href="https://cdn.jsdelivr.net/">
+	<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+	
+	<link rel="stylesheet" id="argon_css_merged-css" href="https://static.pisearch.cn/theme_argon/argon_css_merged.css"
+		type="text/css" media="all">
+	<link rel="stylesheet" id="style-css" href="https://static.pisearch.cn/theme_argon/style.css" type="text/css" media="all">
+	<link rel="stylesheet" id="googlefont-css" href="https://static.pisearch.cn/theme_argon/css" type="text/css" media="all">
+
+	{% include 'oierspace/blog/themes/pc/theme_argon/component/global_styles_inline_css.html' %}
+	<script type="text/javascript" src="https://static.pisearch.cn/theme_argon/argon_js_merged.js" id="argon_js_merged-js"></script>
+	<script type="text/javascript" src="https://static.pisearch.cn/theme_argon/argon.min.js" id="argonjs-js"></script>
+    {% include 'oierspace/blog/themes/pc/theme_argon/component/wp_custom_css.html' %}
+	
+	<script>
+		document.documentElement.classList.remove("no-js");
+		var argonConfig = {
+			wp_path: "/",
+			language: "zh_CN",
+			dateFormat: "YMD",
+			zoomify: false,
+			pangu: "false",
+			lazyload: {
+				threshold: 800,
+				effect: "fadeIn"
+			},
+			fold_long_comments: true,
+			fold_long_shuoshuo: false,
+			disable_pjax: false,
+			pjax_animation_durtion: 600,
+			headroom: "true",
+			waterflow_columns: "1",
+			code_highlight: {
+				enable: true,
+				hide_linenumber: false,
+				transparent_linenumber: false,
+				break_line: false
+			}
+		}
+	</script>
+	<script>
+		var darkmodeAutoSwitch = "time";
+		function setDarkmode(enable) {
+			if (enable == true) {
+				$("html").addClass("darkmode");
+			} else {
+				$("html").removeClass("darkmode");
+			}
+			$(window).trigger("scroll");
+		}
+		function toggleDarkmode() {
+			if ($("html").hasClass("darkmode")) {
+				setDarkmode(false);
+				sessionStorage.setItem("Argon_Enable_Dark_Mode", "false");
+			} else {
+				setDarkmode(true);
+				sessionStorage.setItem("Argon_Enable_Dark_Mode", "true");
+			}
+		}
+		if (sessionStorage.getItem("Argon_Enable_Dark_Mode") == "true") {
+			setDarkmode(true);
+		}
+		function toggleDarkmodeByPrefersColorScheme(media) {
+			if (sessionStorage.getItem('Argon_Enable_Dark_Mode') == "false" || sessionStorage.getItem('Argon_Enable_Dark_Mode') == "true") {
+				return;
+			}
+			if (media.matches) {
+				setDarkmode(true);
+			} else {
+				setDarkmode(false);
+			}
+		}
+		function toggleDarkmodeByTime() {
+			if (sessionStorage.getItem('Argon_Enable_Dark_Mode') == "false" || sessionStorage.getItem('Argon_Enable_Dark_Mode') == "true") {
+				return;
+			}
+			let hour = new Date().getHours();
+			if (hour < 7 || hour >= 22) {
+				setDarkmode(true);
+			} else {
+				setDarkmode(false);
+			}
+		}
+		if (darkmodeAutoSwitch == 'system') {
+			var darkmodeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+			darkmodeMediaQuery.addListener(toggleDarkmodeByPrefersColorScheme);
+			toggleDarkmodeByPrefersColorScheme(darkmodeMediaQuery);
+		}
+		if (darkmodeAutoSwitch == 'time') {
+			toggleDarkmodeByTime();
+		}
+		if (darkmodeAutoSwitch == 'alwayson') {
+			setDarkmode(true);
+		}
+
+		function toggleAmoledDarkMode() {
+			$("html").toggleClass("amoled-dark");
+			if ($("html").hasClass("amoled-dark")) {
+				localStorage.setItem("Argon_Enable_Amoled_Dark_Mode", "true");
+			} else {
+				localStorage.setItem("Argon_Enable_Amoled_Dark_Mode", "false");
+			}
+		}
+		if (localStorage.getItem("Argon_Enable_Amoled_Dark_Mode") == "true") {
+			$("html").addClass("amoled-dark");
+		} else if (localStorage.getItem("Argon_Enable_Amoled_Dark_Mode") == "false") {
+			$("html").removeClass("amoled-dark");
+		}
+	</script>
+	<script>
+		if (navigator.userAgent.indexOf("Safari") !== -1 && navigator.userAgent.indexOf("Chrome") === -1) {
+			$("html").addClass("using-safari");
+		}
+	</script>
+    <link href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-d/font-awesome/5.15.2/css/all.min.css" type="text/css"
+        rel="stylesheet">
+
+    {% block head %}{% endblock %}
+    {% block style %}{% endblock %}
+
+    {% if has_pro_plan %}
+    <style>{{ blog.custom_css }}</style>
+    {% endif %}
+</head>
+
+<body class="post-template-default single single-post postid-746 single-format-standard multiple-domain-solstice23-top with-headroom headroom---not-top leftbar-can-headroom headroom---bottom headroom---pinned"
+    style="background-color: #8595e0!important;">
+	<video src="https://cdn.jsdelivr.net/gh/solstice23/cdn/pixiv_91814999_2k_minified.mp4" class="bg-video bg-video-day" autoplay=""
+		loop="loop" muted=""></video>
+	<video src="https://cdn.jsdelivr.net/gh/solstice23/cdn/pixiv_89449659_2k_minified.mp4" class="bg-video bg-video-night" autoplay=""
+        loop="loop" muted=""></video>
+
+	<style>
+		video.bg-video {
+			position: fixed;
+			z-index: -1;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			width: 100vw;
+			height: 100vh;
+			object-fit: cover;
+			pointer-events: none;
+			transition: opacity .3s ease;
+		}
+
+		video.bg-video.bg-video-day {
+			opacity: 1;
+		}
+
+		video.bg-video.bg-video-night {
+			opacity: 0;
+		}
+
+		html.darkmode video.bg-video.bg-video-day {
+			opacity: 0;
+		}
+
+		html.darkmode video.bg-video.bg-video-night {
+			opacity: 1;
+		}
+
+		html.content-pull-down #content {
+			transform: translateY(calc(58.2vh * var(--pull-down-persent)));
+		}
+
+		#content {
+			transition: transform 0.1s ease-out;
+		}
+
+
+		.banner-container {
+			transition: height .3s ease-out, font-size .3s ease-out;
+		}
+
+		html.content-pull-down .banner-container {
+			height: calc(40vh + 45vh * var(--pull-down-persent) - 120px) !important;
+			font-size: calc(100% + 20% * var(--pull-down-persent));
+		}
+	</style>
+	<style id="themecolor_css">
+		:root {
+			--themecolor: #8e8cd8;
+			--themecolor-R: 142;
+			--themecolor-G: 140;
+			--themecolor-B: 216;
+			--themecolor-H: 242;
+			--themecolor-S: 49;
+			--themecolor-L: 70;
+		}
+	</style>
+	<style id="theme_cardradius_css">
+		:root {
+			--card-radius: 9px;
+		}
+	</style>
+
+    {% include 'oierspace/blog/themes/pc/theme_argon/component/navbar.html' %}
+
+	{% include 'oierspace/blog/themes/pc/theme_argon/component/banner.html' %}
+
+	<style>
+		#content:before {
+			content: '';
+			display: block;
+			position: fixed;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			z-index: -2;
+			background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAEXRFWHRTb2Z0d2FyZQBTbmlwYXN0ZV0Xzt0AAAAMSURBVAiZY1BTUwMAAOgAc4eVdRoAAAAASUVORK5CYII=);
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			opacity: 0.8;
+			transition: opacity .5s ease;
+		}
+
+		html.darkmode #content:before {
+			filter: brightness(0.65);
+		}
+
+		#content:after {
+			content: '';
+			display: block;
+			position: fixed;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			z-index: -2;
+			background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAEXRFWHRTb2Z0d2FyZQBTbmlwYXN0ZV0Xzt0AAAAMSURBVAiZY1BTUwMAAOgAc4eVdRoAAAAASUVORK5CYII=);
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			opacity: 0;
+			transition: opacity .5s ease;
+		}
+
+		html.darkmode #content:after {
+			opacity: 0.8;
+		}
+
+		html.darkmode #content:before {
+			opacity: 0;
+		}
+	</style>
+
+	<div id="content" class="site-content">
+		<div class="page-information-card-container">{% block info %}{% endblock %}</div>
+		<div id="sidebar_mask"></div>
+		<aside id="leftbar" class="leftbar widget-area" role="complementary">
+			{% include 'oierspace/blog/themes/pc/theme_argon/component/side_part1.html' %}
+			{% include 'oierspace/blog/themes/pc/theme_argon/component/side_part2.html' %}
+		</aside>
+        <div id="primary" class="content-area">
+            <main id="main" class="site-main article-list article-list-home" role="main">
+                {% block content %}{% endblock %}
+                <footer id="footer" class="site-footer card shadow-sm border-0">
+                    <div>此博客基于 <a href="https://oier.space">OIer Space</a>，由 <a href="https://www.piterator.com">Piterator</a> 打造。</div>
+                    <div>
+                        Background:
+                        <a href="https://www.pixiv.net/artworks/91814999" target="_blank"><strong>Pixiv 91814999</strong></a>
+                        ☀ &amp; <a href="https://www.pixiv.net/artworks/89449659" target="_blank"><strong>Pixiv 89449659</strong> 🌙</a>
+                    </div>
+                    <div>
+                        Theme <a href="https://github.com/solstice23/argon-theme" target="_blank"><strong>Argon</strong></a>
+                        By solstice23
+                    </div>
+                </footer>
+            </main>
+        </div>
+	</div>
+	<script src="https://static.pisearch.cn/theme_argon/argontheme.js"></script>
+
+	<style>
+		@keyframes beating {
+			20%,
+			50% {
+				transform: scale(1.25);
+			}
+
+			0%,
+			30%,
+			70%,
+			100% {
+				transform: scale(1);
+			}
+		}
+
+		.footer-love-icon {
+			transition: color .3s ease;
+			display: inline-block;
+		}
+
+		#footer:hover .footer-love-icon {
+			color: #ff97a8;
+			animation: beating 1.5s ease-out infinite;
+		}
+	</style>
+	<script>
+		$("#footer > div:last-of-type").append(" with <i class='footer-love-icon'>♥</i>");
+	</script>
+	<style>
+		.triangles {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			opacity: .4;
+			pointer-events: none;
+			overflow: hidden;
+		}
+
+		.leftbar-banner {
+			position: relative;
+		}
+
+		.leftbar-banner .triangles {
+			border-radius: var(--card-radius) var(--card-radius) 0 0;
+		}
+
+		#footer .triangles {
+			border-radius: var(--card-radius);
+		}
+
+		main>.card>.triangles,
+		#leftbar>.card>.triangles {
+			-webkit-mask-image: linear-gradient(0deg, #fff 0%, transparent 100%);
+			mask-image: linear-gradient(0deg, #fff 0%, transparent 100%);
+			opacity: .2;
+			top: calc(100% - 150px);
+		}
+
+		#banner>.shape>span {
+			display: none;
+		}
+
+		#banner>.shape>.triangles {
+			width: 100%;
+			left: 0;
+			right: 0;
+			-webkit-mask-image: linear-gradient(180deg, #fff 0%, transparent 100%);
+			mask-image: linear-gradient(180deg, #fff 0%, transparent 100%);
+			opacity: .35;
+		}
+
+		.related-post-card-container.has-thumbnail~.triangles {
+			display: none;
+		}
+
+		#comment_emotion_btn .triangles {
+			display: none !important;
+		}
+	</style>
+	<style>
+		html:not(.hide-triangles) #blog_setting_triangles_on {
+			color: #fff;
+			background: var(--themecolor);
+		}
+
+		html.hide-triangles #blog_setting_triangles_off {
+			color: #fff;
+			background: var(--themecolor);
+		}
+
+		html.hide-triangles .triangles {
+			display: none;
+		}
+	</style>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+	<style>
+		body {
+			font-family: "Comfortaa", "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif;
+		}
+	</style>
+
+</body>
+
+</html>

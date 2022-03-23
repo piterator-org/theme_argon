@@ -1,0 +1,46 @@
+<div id="leftbar_part2" class="widget widget_search card bg-white shadow-sm border-0 sticky">
+    <div id="leftbar_part2_inner" class="card-body">
+        <div>
+            <div class="tab-content" style="padding: 10px 10px 0 10px;">
+                <div class="tab-pane fade text-center active show" id="leftbar_tab_overview" role="tabpanel"
+                    aria-labelledby="leftbar_tab_overview_btn">
+                    {% if configs.blog_author_avatar %}
+                    <div id="leftbar_overview_author_image" style="background-image: url({{ configs.blog_author_avatar }})"
+                        class="rounded-circle shadow-sm" alt="avatar"></div>
+                    {% endif %}
+                    <h6 id="leftbar_overview_author_name">{{ configs.blog_author }}</h6>
+                    <h6 id="leftbar_overview_author_description">{{ configs.blog_author_intro }}</h6>
+                    <nav class="site-state">
+                        <div class="site-state-item site-state-posts">
+                            <a href="{% url 'blog_posts' %}">
+                                <span class="site-state-item-count">{{ statistics.posts }}</span>
+                                <span class="site-state-item-name">文章</span>
+                            </a>
+                        </div>
+                        <div class="site-state-item site-state-categories">
+                            <span>
+                                <span class="site-state-item-count">{{ statistics.categories }}</span>
+                                <span class="site-state-item-name">分类</span>
+                            </span>
+                        </div>
+                        <div class="site-state-item site-state-tags">
+                            <span>
+                                <span class="site-state-item-count">{{ statistics.comments }}</span>
+                                <span class="site-state-item-name">评论</span>
+                            </span>
+                        </div>
+                    </nav>
+                    <div class="site-friend-links">
+                        <ul class="site-friend-links-ul">
+                            <li class="site-friend-links-item">
+                                {% for category in categories %}
+                                <a href="{% url 'blog_category' category.slug %}">{{ category.title }}</a>
+                                {% endfor %}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

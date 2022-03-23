@@ -1,0 +1,30 @@
+<div id="leftbar_part1" class="widget widget_search card bg-white shadow-sm border-0">
+    <div class="leftbar-banner card-body">
+        <span class="leftbar-banner-title text-white">{{ blog.name }}</span>
+        <span class="leftbar-banner-subtitle text-white">{{ blog.intro }}</span>
+    </div>
+    <ul id="leftbar_part1_menu" class="leftbar-menu" style="text-align: center">
+        <li class="leftbar-menu-item
+        {% url 'index' as index_url %}
+        {% if request.get_full_path == index_url %}
+            current
+        {% endif %}">
+            <a href="{% url 'index' %}">首页</a>
+        </li>
+        <li class="leftbar-menu-item
+        {% url 'blog_posts' as blog_posts_url %}
+        {% if request.get_full_path == blog_posts_url %}
+            current
+        {% endif %}">
+            <a href="{% url 'blog_posts' %}">文章</a>
+        </li>
+        <li class="leftbar-menu-item">
+            <a href="{% url 'sitemap' %}" target="_blank">站点地图</a>
+        </li>
+        {% if blog.owner == user %}
+        <li class="leftbar-menu-item">
+            <a href="https://oier.space/dashboard/" target="_blank">控制面板</a>
+        </li>
+        {% endif %}
+    </ul>
+</div>

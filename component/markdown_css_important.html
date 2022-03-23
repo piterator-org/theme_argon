@@ -1,0 +1,182 @@
+<style>
+    .markdown * {
+        max-width: 100%!important;
+    }
+
+    .markdown blockquote {
+        margin-left: 2.5em!important;
+        box-sizing: border-box!important;
+        position: relative!important;
+        color: #b1b1b3!important;
+        padding: 0.01em 0!important;
+        border-left: unset!important;
+    }
+
+    .markdown blockquote::before {
+        content: ""!important;
+        width: .3em!important;
+        height: 100%!important;
+        background-color: #eeedee!important;
+        box-sizing: border-box!important;
+        position: absolute!important;
+        top: 0!important;
+        left: -2.25em!important;
+    }
+
+    .markdown ul>li {
+        list-style-type: none!important;
+        position: relative!important;
+        margin-left: .2rem!important;
+        cursor: default!important;
+        line-height: 1.8em!important;
+    }
+
+    .markdown ul>li::before {
+        content: "→"!important;
+        position: absolute!important;
+        left: -1.2em!important;
+        color: #dad9da!important;
+        transition: ease-in-out color .1s!important;
+    }
+
+    .markdown ul>li:hover:before {
+        color: #6c757d!important;
+    }
+
+    .markdown ul>li>ul {
+        margin-left: -1em!important;
+        cursor: default!important;
+    }
+
+    .markdown h1 {
+        font-size: 2.5em!important;
+    }
+
+    .markdown h2 {
+        font-size: 2.246em!important;
+    }
+
+    .markdown h3 {
+        font-size: 2.028em!important;
+    }
+
+    .markdown h4 {
+        font-size: 1.792em!important;
+    }
+
+    .markdown h5 {
+        font-size: 1.556em!important;
+    }
+
+    .markdown h6 {
+        font-size: 1.32em!important;
+    }
+
+    .markdown h1, .markdown h2, .markdown h3,
+    .markdown h4, .markdown h5, .markdown h6 {
+        /* text-align: center!important; */
+        cursor: default!important;
+        box-sizing: border-box!important;
+        position: relative!important;
+        width: max-content!important;
+        /* margin: auto!important; */
+        margin-bottom: calc(.1em + .5rem)!important;
+        transition: ease-in-out color .21s!important;
+        color: #5b6369!important;
+        font-weight: 500!important;
+    }
+
+    .markdown h4::before, .markdown h5::before, .markdown h6::before {
+        content: ""!important;
+        width: 0%!important;
+        height: .18em!important;
+        background-color: #eeedee!important;
+        box-sizing: border-box!important;
+        position: absolute!important;
+        bottom: -.3rem!important;
+        left: 38%!important;
+        transition: ease-in-out width .18s!important;
+    }
+
+    .markdown h4:hover::before, .markdown h5:hover::before, .markdown h6:hover::before {
+        width: 62%!important;
+    }
+
+    .markdown h4::after, .markdown h5::after, .markdown h6::after {
+        content: ""!important;
+        width: 0%!important;
+        height: .18em!important;
+        background-color: #eeedee!important;
+        box-sizing: border-box!important;
+        position: absolute!important;
+        bottom: -.3rem!important;
+        right: 62%!important;
+        transition: ease-in-out width .18s!important;
+    }
+
+    .markdown h4:hover::after, .markdown h5:hover::after, .markdown h6:hover::after {
+        width: 38%!important;
+    }
+
+    .markdown h1:hover, .markdown h2:hover, .markdown h3:hover,
+    .markdown h4:hover, .markdown h5:hover, .markdown h6:hover {
+        color: #181a1b!important;
+    }
+
+    .markdown table {
+        margin: auto!important;
+    }
+
+    .markdown table>thead>tr>th {
+        background-color: #f5f5f5!important;
+        border: 1px solid #dad9da!important;
+        padding: .3em .93em .3em .93em!important;
+        min-width: 7.5em!important;
+        cursor: default!important;
+    }
+
+    .markdown table>thead>tr>th[align="left"] {
+        text-align: left!important;
+    }
+
+    .markdown table>thead>tr>th[align="center"] {
+        text-align: center!important;
+    }
+
+    .markdown table>thead>tr>th[align="right"] {
+        text-align: right!important;
+    }
+
+    .markdown table>tbody>tr>td {
+        border: 1px solid #dad9da!important;
+        padding: .3em .9em .3em .9em!important;
+    }
+
+    .markdown p,
+    .markdown pre,
+    .markdown blockquote {
+        margin-top: .8em!important;
+        margin-bottom: .8em!important;
+    }
+
+    .markdown :not(pre)>code {
+        border-radius: .3em!important;
+        background-color: #ffe3eb!important;
+        color: #e24272!important;
+        padding: .08em .4em .04em .4em!important;
+        /* box-sizing: border-box!important; */
+    }
+
+    .markdown code {
+        font-family: 'Fira Code', Consolas, monospace!important;
+        tab-size: 4!important;
+        background-color: #22272d!important;
+        border: none!important;
+    }
+
+    .markdown pre {
+        border-radius: .9em!important;
+        background-color: #22272d!important;
+        border: none!important;
+    }
+</style>

@@ -1,0 +1,30 @@
+<section id="banner" class="banner section section-lg section-shaped">
+    <div class="shape shape-style-1 shape-primary"></div>
+    <div id="banner_container" class="banner-container container text-center">
+        <div class="banner-title text-white">
+            <span class="banner-title-inner">{{ blog.name }}</span>
+        </div>
+    </div>
+</section>
+<style>
+    #banner,
+    #banner .shape {
+        background: transparent !important;
+    }
+
+    #banner:after {
+        content: '';
+        width: 100vw;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 120px;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.15) 35%, rgba(0, 0, 0, 0) 100%);
+        display: block;
+        z-index: -1;
+    }
+
+    .banner-title {
+        text-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+    }
+</style>

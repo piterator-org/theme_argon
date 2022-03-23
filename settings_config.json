@@ -1,0 +1,20 @@
+[
+    {
+        "k": "blog_author_avatar",
+        "ty": "str",
+        "hnt": "作者头像 URL",
+        "plhd": "https://"
+    },
+    {
+        "k": "blog_author",
+        "ty": "str",
+        "hnt": "作者",
+        "plhd": ""
+    },
+    {
+        "k": "blog_author_intro",
+        "ty": "str",
+        "hnt": "作者简介",
+        "plhd": ""
+    }
+]

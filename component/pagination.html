@@ -1,0 +1,36 @@
+<nav>
+    <ul class="pagination">
+        {% if prev_page_show %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ prev_page }}" style="width: max-content; border-radius: .8em!important; padding: 1.4em 2.2em">
+                <i class="fas fa-angle-left"></i>&ensp;上一页
+            </a>
+        </li>
+        {% endif %}
+        {% if next_page_show %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ next_page }}" style="width: max-content; border-radius: .8em!important; padding: 1.4em 2.2em">
+                下一页&ensp;<i class="fas fa-angle-right"></i>
+            </a>
+        </li>
+        {% endif %}
+    </ul>
+</nav>
+<nav>
+    <ul class="pagination pagination-mobile">
+        {% if prev_page_show %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ prev_page }}">
+                <i class="fas fa-angle-left"></i>
+            </a>
+        </li>
+        {% endif %}
+        {% if next_page_show %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ next_page }}">
+                <i class="fas fa-angle-right"></i>
+            </a>
+        </li>
+        {% endif %}
+    </ul>
+</nav>

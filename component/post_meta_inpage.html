@@ -1,0 +1,22 @@
+<div class="post-meta">
+    <div class="post-meta-detail post-meta-detail-time">
+        <i class="fas fa-clock"></i>
+        <time title="发布于 {{ post.publish_time }} | 编辑于 {{ post.last_edit_time }}">
+            {{ post.publish_time }}
+        </time>
+    </div>
+    <div class="post-meta-devide">|</div>
+    <div class="post-meta-detail post-meta-detail-comments">
+        <i class="fas fa-comments"></i> {{ num_comments }}
+    </div>
+    <div class="post-meta-devide">|</div>
+    <div class="post-meta-detail post-meta-detail-categories">
+        <i class="fas fa-bookmark"></i>
+        <a href="{% url 'blog_category' post.category.slug %}" target="_blank"
+            class="post-meta-detail-catagory-link">{{ post.category.title }}</a>
+    </div>
+    <div class="post-meta-devide">|</div>
+    <div class="post-meta-detail post-meta-detail-words">
+        <i class="fas fa-file-word"></i> {{ content_len }} 字
+    </div>
+</div>
