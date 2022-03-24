@@ -17,13 +17,13 @@
             style="opacity: 0;">
         <div class="post-header-text-container">
             <a class="post-title" href="{% url 'blog_post' post.slug %}">{{ post.title }}</a>
-            {% include 'oierspace/blog/themes/pc/theme_argon/component/post_meta_inpage.html' %}
+            {% include 'oierspace/blog/themes/pc/theme_argon/component/post_meta.html' %}
         </div>
     </header>
     {% else %}
     <header class="post-header text-center">
         <a class="post-title" href="{% url 'blog_post' post.slug %}">{{ post.title }}</a>
-        {% include 'oierspace/blog/themes/pc/theme_argon/component/post_meta_inpage.html' %}
+        {% include 'oierspace/blog/themes/pc/theme_argon/component/post_meta.html' %}
     </header>
     {% endif %}
     <div class="post-content" id="post_content">
