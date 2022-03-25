@@ -71,9 +71,9 @@
     </div>
 </div>
 {% endif %}
-{% if user.is_authenticated %}
 <div id="post_comment" class="card shadow-sm">
     <div class="card-body">
+        {% if user.is_authenticated %}
         <form method="post" action="#comments">
             {% csrf_token %}
             <div class="row">
@@ -91,7 +91,16 @@
                 </div>
             </div>
         </form>
+        {% else %}
+        <div class="row" style="margin-top: 5px; margin-bottom: 10px;">
+            <div class="col-md-12">
+                <a id="post_comment_send" class="btn btn-icon btn-primary comment-btn pull-right mr-0 w-100"
+                    href="https://oier.space/luogulogin/?r={{ blog.domain }}&loc=post/{{ post.slug }}">
+                    登录以发送评论
+                </a>
+            </div>
+        </div>
+        {% endif %}
     </div>
 </div>
-{% endif %}
 {% endblock %}
