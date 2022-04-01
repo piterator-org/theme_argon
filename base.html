@@ -132,7 +132,7 @@
     {% block style %}{% endblock %}
 
     {% if has_pro_plan %}
-    <style>{{ blog.custom_css|safe }}</style>
+    <style>{{ blog.custom_css }}</style>
     {% endif %}
 </head>
 
@@ -392,10 +392,6 @@
 			font-family: "Comfortaa", "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif;
 		}
 	</style>
-
-	{% if has_pro_plan %}
-	<script>{{ blog.custom_js|safe }}</script>
-    {% endif %}
 </body>
 
 </html>
