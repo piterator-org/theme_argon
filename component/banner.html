@@ -9,7 +9,9 @@
 <style>
     #banner,
     #banner .shape {
+        {% if configs.background_video %}
         background: transparent !important;
+        {% endif %}
     }
 
     #banner:after {

@@ -136,13 +136,13 @@
     {% endif %}
 </head>
 
-<body class="post-template-default single single-post postid-746 single-format-standard multiple-domain-solstice23-top with-headroom headroom---not-top leftbar-can-headroom headroom---bottom headroom---pinned"
-    style="background-color: #8595e0!important;">
+<body class="post-template-default single single-post postid-746 single-format-standard multiple-domain-solstice23-top with-headroom headroom---not-top leftbar-can-headroom headroom---bottom headroom---pinned">
+	{% if configs.background_video %}
 	<video src="https://cdn.jsdelivr.net/gh/solstice23/cdn/pixiv_91814999_2k_minified.mp4" class="bg-video bg-video-day" autoplay=""
 		loop="loop" muted=""></video>
 	<video src="https://cdn.jsdelivr.net/gh/solstice23/cdn/pixiv_89449659_2k_minified.mp4" class="bg-video bg-video-night" autoplay=""
         loop="loop" muted=""></video>
-
+	{% endif %}
 	<style>
 		video.bg-video {
 			position: fixed;
@@ -223,7 +223,9 @@
 			top: 0;
 			bottom: 0;
 			z-index: -2;
+			{% if configs.background_video %}
 			background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAEXRFWHRTb2Z0d2FyZQBTbmlwYXN0ZV0Xzt0AAAAMSURBVAiZY1BTUwMAAOgAc4eVdRoAAAAASUVORK5CYII=);
+			{% endif %}
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
@@ -244,7 +246,9 @@
 			top: 0;
 			bottom: 0;
 			z-index: -2;
+			{% if configs.background_video %}
 			background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAEXRFWHRTb2Z0d2FyZQBTbmlwYXN0ZV0Xzt0AAAAMSURBVAiZY1BTUwMAAOgAc4eVdRoAAAAASUVORK5CYII=);
+			{% endif %}
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
@@ -273,11 +277,13 @@
                 {% block content %}{% endblock %}
                 <footer id="footer" class="site-footer card shadow-sm border-0">
                     <div>此博客基于 <a href="https://oier.space">OIer Space</a>，由 <a href="https://www.piterator.com">Piterator</a> 打造。</div>
+					{% if configs.background_video %}
                     <div>
                         Background:
                         <a href="https://www.pixiv.net/artworks/91814999" target="_blank"><strong>Pixiv 91814999</strong></a>
                         ☀ &amp; <a href="https://www.pixiv.net/artworks/89449659" target="_blank"><strong>Pixiv 89449659</strong> 🌙</a>
                     </div>
+					{% endif %}
                     <div>
                         Theme <a href="https://github.com/solstice23/argon-theme" target="_blank"><strong>Argon</strong></a>
                         By solstice23
