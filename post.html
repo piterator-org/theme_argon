@@ -35,7 +35,11 @@
         {% include 'oierspace/blog/themes/pc/theme_argon/component/markdown_css_important.html' %}
     </div>
     <div class="mt-2">
-        最后编辑于 {{ post.last_edit_time }} <br>
+        最后编辑于 {{ post.last_edit_time }}
+        {% if post.wbh_voted_up %}
+        <span class="badge bg-secondary align-bottom"><i class="fas fa-thumbs-up"></i> 站长赞了</span>
+        {% endif %}
+        <br>
         <div id="vote" class="mt-1">
             {% if user_vote == 1 %}
             <a href="?vote=cancel"><i class="fas fa-thumbs-up"></i></a>
@@ -64,6 +68,9 @@
                                 {{ comment.username_display }}
                                 {% if comment.blogger_voted_up %}
                                 <span class="badge bg-secondary align-bottom"><i class="fas fa-thumbs-up"></i> 博主赞了</span>
+                                {% endif %}
+                                {% if comment.wbh_voted_up %}
+                                <span class="badge bg-secondary align-bottom"><i class="fas fa-thumbs-up"></i> 站长赞了</span>
                                 {% endif %}
                             </div>
                         </div>
