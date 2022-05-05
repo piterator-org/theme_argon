@@ -34,6 +34,22 @@
         </script>
         {% include 'oierspace/blog/themes/pc/theme_argon/component/markdown_css_important.html' %}
     </div>
+    <div class="mt-2">
+        最后编辑于 {{ post.last_edit_time }} <br>
+        <div id="vote" class="mt-1">
+            {% if user_vote == 1 %}
+            <a href="?vote=cancel"><i class="fas fa-thumbs-up"></i></a>
+            {% else %}
+            <a href="?vote=up"><i class="far fa-thumbs-up"></i></a>
+            {% endif %}
+            &ensp;{{ post.vote }}&ensp;
+            {% if user_vote == -1 %}
+            <a href="?vote=cancel"><i class="fas fa-thumbs-down"></i></a>
+            {% else %}
+            <a href="?vote=down"><i class="far fa-thumbs-down"></i></a>
+            {% endif %}
+        </div>
+    </div>
 </article>
 {% if comments %}
 <div id="comments" class="comments-area card shadow-sm">
@@ -44,13 +60,31 @@
                 <div class="comment-item-inner w-100" id="comment-inner-{{ comment.pk }}">
                     <div class="comment-item-title">
                         <div class="comment-name">
-                            <div class="comment-author">{{ comment.username_display }}</div>
+                            <div class="comment-author">
+                                {{ comment.username_display }}
+                                {% if comment.blogger_voted_up %}
+                                <span class="badge bg-secondary align-bottom"><i class="fas fa-thumbs-up"></i> 博主赞了</span>
+                                {% endif %}
+                            </div>
                         </div>
                         <div class="comment-info">
                             <div class="comment-time">
                                 {% if comment.user == user or blog.owner == user %}
                                 <a href="?delete={{ comment.pk }}">删除</a>
                                 {% endif %}
+                                &ensp;
+                                {% if comment.user_vote == 1 %}
+                                <a href="?vote=cancel&vote_target={{ comment.pk }}"><i class="fas fa-thumbs-up"></i></a>
+                                {% else %}
+                                <a href="?vote=up&vote_target={{ comment.pk }}"><i class="far fa-thumbs-up"></i></a>
+                                {% endif %}
+                                &thinsp;{{ comment.vote }}&thinsp;
+                                {% if comment.user_vote == -1 %}
+                                <a href="?vote=cancel&vote_target={{ comment.pk }}"><i class="fas fa-thumbs-down"></i></a>
+                                {% else %}
+                                <a href="?vote=down&vote_target={{ comment.pk }}"><i class="far fa-thumbs-down"></i></a>
+                                {% endif %}
+                                &ensp;
                                 <span class="human-time">{{ comment.sending_time }}</span>
                             </div>
                         </div>
